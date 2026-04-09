@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - Loan-Disburshment
+name: Build and deploy ASP.Net Core app to Azure Web App - loan-application-system
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_97F4EC001F1E49D5A39CFD76B4E1DFFB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9B1DCE954E8C44728DFCCA82AC72A0B6 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3F99C081E11E47BA88D696B10815A6D3 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FD027013ACF84FF880EBA82E5AB667AB }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_28D2ED9CA1844B9F9A88C9C914635D24 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_729B5DB9B0B84E45AB41A2F2E4C5DE0B }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Loan-Disburshment'
+          app-name: 'loan-application-system'
           slot-name: 'Production'
           package: .
           
