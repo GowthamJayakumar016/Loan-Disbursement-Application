@@ -13,8 +13,8 @@ namespace NewWebApplication.Data
                 var admin = new User
                 {
                     Username = "Admin",
-                    Email = "admin@bank.com",
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("Admin@123"),
+                    Email = "admin@gmail.com",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
                     Role = "Admin"
                 };
 

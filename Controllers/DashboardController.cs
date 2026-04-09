@@ -30,8 +30,8 @@ namespace NewWebApplication.Controllers
         public IActionResult AdminDashboard()
         {
             var role = HttpContext.Session.GetString("UserRole");
-
-            if (role != "Admin")
+            var token = HttpContext.Session.GetString("AuthToken");
+            if (role != "Admin" || token==null )
                 return RedirectToAction("Login", "Auth");
 
             var applications = _context.LoanApplications.ToList();
